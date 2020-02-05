@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import Nav from "../components/Nav";
 import useStyles from "../hooks/useStyles";
+import { Code } from "../components/Code";
 
 export default function Index() {
   const classes = useStyles();
@@ -27,35 +28,27 @@ export default function Index() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        <Typography paragraph>Prompting People</Typography>
+        <Code language="python">
+          {`from sys import argv
+script, user_name = argv
+prompt = '> '
+
+print(f"Hi {user_name}, I'm the {script} script.")
+print("I'd like to ask you a few questions.")
+print(f"Do you like me {user_name}?")
+likes = input(prompt)
+
+print(f"Where do you live {user_name}?")
+lives = input(prompt)
+print("What kind of computer do you have?")
+computer = input(prompt)
+print(f"""
+Alright, so you said {likes} about liking me.
+You live in {lives}.  Not sure where that is.
+And you have a {computer} computer.  Nice.
+""")`}
+        </Code>
       </main>
     </div>
   );
