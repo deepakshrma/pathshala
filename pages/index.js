@@ -49,6 +49,8 @@ You live in {lives}.  Not sure where that is.
 And you have a {computer} computer.  Nice.
 """)`}
         </Code>
+        <Typography paragraph>Embed</Typography>
+        <iframe src="https://trinket.io/embed/python/ae366fe9f8" width="100%" height="356" frameborder="0" marginWidth="0" marginHeight="0" allowFullScreen></iframe>
       </main>
     </div>
   );
